@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Glassmorphism</title>
+</head>
+<body>
+    <div class="title">
+        <h1>glassmorphism.</h1>
+    </div>
+    
+    <div class="app-container">
+        
+        <div class="app-left">
+            <div class="glass-element"></div>
+        </div>
+        <div class="app-right">
+            <div class="glass-configuration">
+                <p>Selecciona un color:</p>
+                <input class="color" type="color" name="color">
+            </div>
+            <div class="glass-configuration">
+                <p class="opacity">Opacidad</p>
+                <div>
+                    <input id="opacity" type="range" name="opacity" min="0.01" max="1" step="0.01" value="0.58%">
+                    <output class="value-opacity">0.58%</output>
+                </div>    
+            </div>
+            <div class="glass-configuration">
+                <p class="blur">Difuminado</p>
+                <div>
+                    <input id="blur" type="range" name="blur" min="0" max="15" step="0.5" value="2">
+                    <output class="value-blur">2px</output>
+                </div>
+            </div>
+            <div class="glass-configuration">
+                <p class="size">Tamaño</p>
+                <div>
+                    <input id="size" type="range" name="size" min="100" max="450" step="1" value="450">
+                    <output class="value-size">450px</output>
+                </div>
+                
+            </div>
+            <div class="glass-configuration">
+                <p class="radius">Radio</p>
+                <div>
+                    <input id="radius" type="range" name="radius" min="0" max="250" step="1" value="20">
+                    <output class="value-radius">20px</output>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
+
