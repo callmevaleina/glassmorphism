@@ -51,7 +51,7 @@ body {
 }
 
 .app-container{
-    width: 80%;
+    width: 60%;
     height: 600px;
     display: flex;
     justify-content: space-around;
