@@ -38,7 +38,7 @@ body {
 .title{
     display: flex;
     height: 80px;
-    margin-top: 20px;
+    margin-top: 0px;
     
     
 }
@@ -51,11 +51,12 @@ body {
 }
 
 .app-container{
-    width: 60%;
+    width: 80%;
     height: 600px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 20px;
    /* background: var(--dark); */
 }
 
