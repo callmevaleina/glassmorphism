@@ -35,7 +35,7 @@ body {
     align-items: center;
 }
 
-.title{
+/* .title{
     display: flex;
     height: 80px;
     margin-top: 0px;
@@ -48,7 +48,7 @@ body {
     font: bold 100px/1 'Lato';
     color: #fed8b2;
     text-shadow: 0  2px 0 #cbac8d, 0  4px 0 #c0a284, 0  6px 0 #ab9276, 0  8px 0 #978068, 0 10px 0 #8d7760, 0 12px 0 #71604d;
-}
+} */
 
 .app-container{
     width: 80%;
@@ -56,7 +56,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0px;
    /* background: var(--dark); */
 }
 
@@ -185,12 +185,12 @@ input[type=range]::-ms-track {
   
 @media (max-width: 375px){
 
-.title{
+/* .title{
   margin-top: 0px;
 }
 .title > h1{
     font: bold 50px/1 'Lato';
-}
+} */
 .app-container {
 
     width: 95%;
@@ -199,7 +199,7 @@ input[type=range]::-ms-track {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-top: -70px;
+    margin-top: 0px;
 }
 
 .app-left{
