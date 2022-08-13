@@ -63,6 +63,7 @@ opacity.addEventListener('input', (e) =>{
 
 blur.addEventListener('input', (e)=>{
     glassElement.style.backdropFilter = `blur(${e.target.value}px)`
+    glassElement.style.webkit.backdropFilter = `blur(${e.target.value}px)`
     valueBlur.value = `${e.target.value}px`
 }); 
 
