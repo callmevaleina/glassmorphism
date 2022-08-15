@@ -36,7 +36,7 @@ const valueSize = document.querySelector('.value-size');
 
 const valueRadius = document.querySelector('.value-radius');
 
-const cssCodeContainer = document.querySelector('.css-code-container')
+const cssCode = document.querySelector('.css-code')
 
 
 
@@ -64,10 +64,10 @@ function hexToRgb(hex){
 };
 
 function insertHtml (radiusCode = '20', backgroundCode = 'rgba(255, 255, 255, 0.1)', backdropFilterBlur = '2', backdropFilterSaturation = '70', backdropFilterContrast = '70'){
-    cssCodeContainer.innerHTML = ` <p> .glass {</p>
-    <p> background: ${backgroundCode}</p>
-    <p> backdrop-filter: blur(${backdropFilterBlur} px)</p> <p> saturate(${backdropFilterSaturation}%) </p> <p> contrast(${backdropFilterContrast}%) </p>
-    <p> border-radius: ${radiusCode} px</p>
+    cssCode.innerHTML = ` <p> .glass {</p>
+    <p> background: rgba (${rgb}, ${opacity.value});</p>
+    <p> backdrop-filter: blur(${backdropFilterBlur} px), saturate(${backdropFilterSaturation}%),  contrast(${backdropFilterContrast}%); </p>
+    <p> border-radius: ${radiusCode} px;</p>
     <p>}</p>`
     ;
 
@@ -91,6 +91,7 @@ opacity.addEventListener('input', (e) =>{
     console.log(rgba);    
     valueOpacity.value = `${e.target.value}%`
     console.log(e.target.value);
+    insertHtml()
 
 });
 
