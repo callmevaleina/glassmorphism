@@ -42,12 +42,14 @@ const cssCode = document.querySelector('.css-code')
 
 let rgb;
 
-let valuesCode = [];
-let radiusCode;
+
 let backgroundCode;
 let backdropFilterBlur;
 let backdropFilterSaturation;
 let backdropFilterContrast;
+let radiusCode;
+let sizeCode;
+let initColor = '255, 255, 255,' + opacity.value;
 
 
 function hexToRgb(hex){
@@ -63,11 +65,15 @@ function hexToRgb(hex){
     throw new Error('Bad Hex');
 };
 
-function insertHtml (radiusCode = '20', backgroundCode = 'rgba(255, 255, 255, 0.1)', backdropFilterBlur = '2', backdropFilterSaturation = '70', backdropFilterContrast = '70'){
+function insertHtml (radiusCode = '20', backgroundCode = initColor, backdropFilterBlur = '2', backdropFilterSaturation = '70', backdropFilterContrast = '70', sizeCode = '450'){
     cssCode.innerHTML = ` <p> .glass {</p>
-    <p> background: rgba (${rgb}, ${opacity.value});</p>
-    <p> backdrop-filter: blur(${backdropFilterBlur} px), saturate(${backdropFilterSaturation}%),  contrast(${backdropFilterContrast}%); </p>
-    <p> border-radius: ${radiusCode} px;</p>
+    <div class= "info-css">
+        <p> width: ${sizeCode} px;</p>
+        <p> height: ${sizeCode} px;</p>
+        <p> background: rgba (${backgroundCode});</p>
+        <p> backdrop-filter: blur(${backdropFilterBlur} px), saturate(${backdropFilterSaturation}%),  contrast(${backdropFilterContrast}%); </p>
+        <p> border-radius: ${radiusCode} px;</p>
+    </div>
     <p>}</p>`
     ;
 
@@ -126,6 +132,8 @@ size.addEventListener('input', (e)=>{
     glassElement.style.width = `${e.target.value}px`
     glassElement.style.height = `${e.target.value}px`
     valueSize.value = e.target.value
+    sizeCode = e.target.value
+    insertHtml()
 }); 
 
 radius.addEventListener('input', (e)=>{

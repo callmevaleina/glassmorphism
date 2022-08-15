@@ -69,7 +69,7 @@ body {
 }
 
 .glass-element{
-    width: 100%;
+    width: 450px;
     height: 450px;
     box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.528); 
     border-radius: 20px;
@@ -137,6 +137,14 @@ body {
     font-size: 17px;
     font-weight: 600;
     margin-left: 15px;
+}
+
+.info-css{
+    color: var(--dark-gray);
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 45px;
+    line-height: 5px;
 }
 
 output{
