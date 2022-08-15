@@ -43,13 +43,11 @@ const cssCode = document.querySelector('.css-code')
 let rgb;
 
 
+let radiusCode;
 let backgroundCode;
 let backdropFilterBlur;
 let backdropFilterSaturation;
 let backdropFilterContrast;
-let radiusCode;
-let sizeCode;
-let initColor = '255, 255, 255,' + opacity.value;
 
 
 function hexToRgb(hex){
@@ -65,17 +63,14 @@ function hexToRgb(hex){
     throw new Error('Bad Hex');
 };
 
-function insertHtml (radiusCode = '20', backgroundCode = initColor, backdropFilterBlur = '2', backdropFilterSaturation = '70', backdropFilterContrast = '70', sizeCode = '450'){
+function insertHtml (radiusCode = '20', backgroundCode = 'rgba (0, 0, 0, 0.1)', backdropFilterBlur = '2', backdropFilterSaturation = '70', backdropFilterContrast = '70'){
     cssCode.innerHTML = ` <p> .glass {</p>
-    <div class= "info-css">
-        <p> width: ${sizeCode} px;</p>
-        <p> height: ${sizeCode} px;</p>
-        <p> background: rgba (${backgroundCode});</p>
-        <p> backdrop-filter: blur(${backdropFilterBlur} px), saturate(${backdropFilterSaturation}%),  contrast(${backdropFilterContrast}%); </p>
-        <p> border-radius: ${radiusCode} px;</p>
+    <div class="info-css">
+    <p> background: ${backgroundCode};</p>
+    <p> backdrop-filter: blur(${backdropFilterBlur} px), saturate(${backdropFilterSaturation}%), contrast(${backdropFilterContrast}%); </p>
+    <p> border-radius: ${radiusCode} px;</p>
     </div>
-    <p>}</p>`
-    ;
+    <p>}</p>`;
 
 };
 
@@ -86,6 +81,9 @@ color.addEventListener('input', (e)=>{
     glassElement.style.background = rgba
     backgroundCode = rgba
     insertHtml()
+
+    console.log(backgroundCode);
+
     
 });
 
@@ -107,6 +105,7 @@ blur.addEventListener('input', (e)=>{
     valueBlur.value = `${e.target.value}px`
     backdropFilterBlur = e.target.value
     insertHtml()
+    console.log(backdropFilterBlur);
     
 }); 
 
@@ -116,6 +115,7 @@ saturation.addEventListener('input', (e)=>{
     valueSaturation.value = `${e.target.value}%`
     backdropFilterSaturation = e.target.value
     insertHtml()
+    console.log(backdropFilterSaturation);
     
 }); 
 
@@ -125,6 +125,7 @@ contrast.addEventListener('input', (e)=>{
     valueContrast.value = `${e.target.value}%`
     backdropFilterContrast = e.target.value
     insertHtml()
+    console.log(backdropFilterContrast)
 }); 
 
 
@@ -132,8 +133,6 @@ size.addEventListener('input', (e)=>{
     glassElement.style.width = `${e.target.value}px`
     glassElement.style.height = `${e.target.value}px`
     valueSize.value = e.target.value
-    sizeCode = e.target.value
-    insertHtml()
 }); 
 
 radius.addEventListener('input', (e)=>{
@@ -141,6 +140,7 @@ radius.addEventListener('input', (e)=>{
     valueRadius.value = `${e.target.value}px`
     radiusCode = e.target.value
     insertHtml()
+    console.log(radiusCode);
     
 }); 
 
