@@ -182,8 +182,10 @@ input[type=range]::-ms-track {
     background: rgb(255, 255, 255); 
     height: 3px;
 }
- .css-code-container{
+
+.css-code-container{
     width: 450px;
     height: 250px;
     background: var(--dark)
- }
+    
+}

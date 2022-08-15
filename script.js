@@ -44,7 +44,6 @@ let rgb;
 
 let valuesCode = [];
 let radiusCode;
-console.log(radiusCode);
 let backgroundCode;
 let backdropFilterBlur;
 let backdropFilterSaturation;
@@ -72,13 +71,9 @@ color.addEventListener('input', (e)=>{
     glassElement.style.background = rgba
     backgroundCode = rgba
     valuesCode.push(
-        `<div class="css-code" style="background: black;" style="color: white;" width="450px" height="250px" style="font-family:'Lato';" style="font-size: 12px;">
-            <p>.glass {</p>
-            <p> border-radius: ${radiusCode} px</p>
-            <p> background: ${backgroundCode}</p>
-            <p> backdrop-filter: blur(${backdropFilterBlur} px) saturate(${backdropFilterSaturation}%) contrast(${backdropFilterContrast}%)</p>     
-            <p>}</p>
-        </div>`
+        `  
+        <p>.glass {</p>
+        <p> background: ${backgroundCode}</p>`
       );
     const valuesCodeText = valuesCode.join("");
     cssCodeContainer.innerHTML = valuesCodeText;
@@ -101,6 +96,11 @@ blur.addEventListener('input', (e)=>{
     glassElement.style.webkitBackdropFilter = `blur(${e.target.value}px)`
     valueBlur.value = `${e.target.value}px`
     backdropFilterBlur = e.target.value
+    valuesCode.push(
+        ` <p> backdrop-filter: blur(${backdropFilterBlur} px)</p>`
+      );
+    const valuesCodeText = valuesCode.join("");
+    cssCodeContainer.innerHTML = valuesCodeText;
     
 }); 
 
@@ -109,6 +109,12 @@ saturation.addEventListener('input', (e)=>{
     glassElement.style.webkitBackdropFilter = `saturate(${e.target.value}%)`
     valueSaturation.value = `${e.target.value}%`
     backdropFilterSaturation = e.target.value
+    valuesCode.push(
+        ` <p> saturate(${backdropFilterSaturation}%) </p>`
+      );
+    const valuesCodeText = valuesCode.join("");
+    cssCodeContainer.innerHTML = valuesCodeText;
+    
 }); 
 
 contrast.addEventListener('input', (e)=>{
@@ -116,6 +122,11 @@ contrast.addEventListener('input', (e)=>{
     glassElement.style.webkitBackdropFilter = `contrast(${e.target.value}%)`
     valueContrast.value = `${e.target.value}%`
     backdropFilterContrast = e.target.value
+    valuesCode.push(
+        ` <p> contrast(${backdropFilterContrast}%) </p>`
+      );
+    const valuesCodeText = valuesCode.join("");
+    cssCodeContainer.innerHTML = valuesCodeText;
 }); 
 
 
@@ -129,6 +140,13 @@ radius.addEventListener('input', (e)=>{
     glassElement.style.borderRadius = `${e.target.value}px`
     valueRadius.value = `${e.target.value}px`
     radiusCode = e.target.value
+    valuesCode.push(
+        `<p> border-radius: ${radiusCode} px</p>
+        <p>}</p>`
+      );
+    const valuesCodeText = valuesCode.join("");
+    cssCodeContainer.innerHTML = valuesCodeText;
+    
 }); 
 
 
