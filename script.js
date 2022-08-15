@@ -40,7 +40,7 @@ const cssCode = document.querySelector('.css-code')
 
 
 
-let rgb;
+let rgb = '255,255,255';
 
 
 let radiusCode = '20';
