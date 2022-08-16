@@ -82,11 +82,7 @@ color.addEventListener('input', (e)=>{
     let rgba = `rgba(${rgb}, ${opacity.value})`
     console.log(rgba);
     glassElement.style.background = rgba
-    insertHtml ()
-
-    console.log(backgroundCode);
-
-    
+    insertHtml ()    
 });
 
 
