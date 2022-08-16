@@ -296,5 +296,9 @@ input[type=range]::-ms-track {
     
 }
 
+output{
+    font-size: 12px;
+}
+
 
 }
