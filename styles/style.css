@@ -132,6 +132,10 @@ body {
 
 }
 
+.css-code{
+    width: 100%;
+}
+
 .css-code-container > p{
     color: var(--dark-gray);
     font-size: 20px;
@@ -147,8 +151,10 @@ body {
 }
 
 .info-css{
+    width: 90%;
     color: var(--dark-gray);
     font-size: 17px;
+
     font-weight: 600;
     margin-left: 45px;
     line-height: 5px;
@@ -274,18 +280,19 @@ input[type=range]::-ms-track {
 
 .css-code-container > p{
     font-size: 15px;
-
 }
 
 
 .css-code > p{
     font-size: 12px;
     margin-top: -5px;
-    line-height: 30px;
+    
 }
 
 .info-css{
+    width: 90%;
     font-size: 12px;
+    line-height: 12px;
     
 }
 
